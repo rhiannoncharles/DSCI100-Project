@@ -1,6 +1,5 @@
 # DSCI100-Project
 #Downloading the neccessary packages.
-library(repr)
 library(tidyverse)
 library(tidymodels)
 
@@ -24,18 +23,6 @@ clev_train <- training(clev_split)
 clev_test <- testing(clev_split)
 head(clev_train)
 
-
-
-#Centering and scaling the training data.
-clev_data_recipe <- recipe(Buff_or_Sick ~ Cholesterol + Max_Heart_Rate + Nmbr_of_Vessels_Col, data = clev_train) %>%
-                        step_center(all_predictors()) %>%
-                        step_scale(all_predictors())
-
-#Baking the recipe to examine the output.
-clev_data_scaled <- clev_data_recipe %>%  
-                            prep() %>% 
-                            bake(clev_train)
-
 #Selecting predictor variables and visualizing the summary of the predictor variables.
 data_selected <- clev_train %>%
     select(Cholesterol, Max_Heart_Rate, Nmbr_of_Vessels_Col )
@@ -49,4 +36,7 @@ plot_1 <- clev_train %>%
     labs(x="Cholesterol", y="Max Heart Rate", color="Health Status")+
     ggtitle("Cholesterol vs Max Heart Rate")
 plot_1
+
+
+
 
