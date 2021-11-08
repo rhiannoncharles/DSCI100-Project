@@ -1,3 +1,11 @@
+#Title: Predicting Heart Disease 
+
+#Introduction
+Provide some relevant background information on the topic so that someone unfamiliar with it will be prepared to understand the rest of your proposal
+Clearly state the question you will try to answer with your project
+Identify and describe the dataset that will be used to answer the question
+
+
 # DSCI100-Project
 #Downloading the neccessary packages.
 library(tidyverse)
@@ -37,6 +45,7 @@ plot_1 <- clev_train %>%
     ggtitle("Cholesterol vs Max Heart Rate")
 plot_1
 
-
+#Methods:
+#We will do a classification to predict if the individual has heart disease or not. We plan on using all the variables so we can make an #accurate prediction. One way we will visualize our results is with a scatterplot that shows the likelihood of heart disease based on #certain predictors. We hope to find certain predictors that better show the likelihood of heart disease which can help to make it easier #to predict it in patients. Futher questions that could come from this are what combinations of two or three predictors show the highest #likelihood of heart disease or what combinations are the least accurate. 
 
 
